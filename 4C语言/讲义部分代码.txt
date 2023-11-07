@@ -1,0 +1,88 @@
+50页PPT
+如何判断a是否为质数：
+void  iszhishu（ int a ）
+{  for（i=2；i<a/2；i++）
+       if(a%i==0) 
+		printf（“不是质数”）;
+            break:
+   printf(“是质数！”)；
+}
+
+/*判断质数*/  
+#include<stdio.h>  
+#include<string.h>  
+int zhishu(int); 
+void main()  
+{  
+    int a;  
+    int p ;  
+    printf(“请输入一个数字:\n");  
+    scanf(“%d”,&a);  
+    p = zhishu(a);  
+    if (p)  
+        printf(“此数字是质数");  
+    else  
+        printf(“此数字不是质数");  
+    system("pause");  
+    return 0;  
+}  
+int zhishu(int a)  
+{  
+    for(i = 2; i < a/2; i++)  
+      { if (a%i==0) 
+            flag=0;
+            break;
+        else flag=1;  
+       }         
+    if (flag==0)  
+        return 0;  
+    else return 1;   
+}  
+----------------------------------------
+
+
+65页PPT
+# include<stdio.h>
+main(){
+int score[8]={75,68,89,72,62,83,85,92};
+int sum=0,avg=0,max=0,min=100;
+int *p;//定义p为指针变量
+for (p=&(score[0]);p<=&(score[7]);p++)
+{
+sum=sum+*p;
+if(*p>max){
+           max=*p;        
+           }
+if(*p<min){
+           min=*p
+           }           
+}
+printf("sum=%d avg=%f",sum,sum/8.0 );
+printf(“max=%d， min=%d ",max,min)
+}
+----------------------------------------     
+  
+                       
+71页PPT
+#include <stdio.h>
+int main()
+{
+    int a[3][3];
+    int i,j;
+    int m=0,n=0;
+    for(i=0; i<=2; i++)
+    {
+        for(j=0; j<=2; j++)
+            scanf("%d",&a[i][j]);
+    }
+    for(i=0; i<=2; i++)
+    {
+            m=m+a[i][i];
+            n=n+a[i][2-i];
+    }
+    printf("%d %d",m,n);
+    return 0;
+}
+
+
+
